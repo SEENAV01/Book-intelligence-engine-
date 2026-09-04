@@ -1,0 +1,6 @@
+{
+  "name": "Book-to-Video Intelligence Engine",
+  "description": "Enterprise Book-to-Video Intelligence Suite with Gemini Multimodal AI chapter decomposition, 3D WebGL physics simulations, interactive neural knowledge graph, and cloud Remotion render farm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

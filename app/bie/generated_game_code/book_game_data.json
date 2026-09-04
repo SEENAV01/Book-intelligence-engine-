@@ -1,0 +1,406 @@
+{
+  "game_id": "game_ch01_electrostatics",
+  "book_title": "Modern Physics & Earth Dynamics",
+  "scoring_system": {
+    "discovery_points": 100,
+    "misconception_busted_points": 250,
+    "streak_multiplier": true
+  },
+  "levels": [
+    {
+      "level_id": "level_concept_ch01_electrostatics_sec01_charge",
+      "title": "Electric Charge & Coulomb's Law",
+      "topic": "Physics: Electrostatic Forces (Coulomb's Law)",
+      "manipulables": [
+        {
+          "id": "charge_1",
+          "label": "Charge q1 (+3 \u03bcC)",
+          "object_type": "electric_charge",
+          "initial_position": {
+            "x": 30.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": true,
+          "attributes": {
+            "charge_value": 3.0,
+            "sign": "+",
+            "color": "#3b82f6"
+          }
+        },
+        {
+          "id": "charge_2",
+          "label": "Charge q2 (-3 \u03bcC)",
+          "object_type": "electric_charge",
+          "initial_position": {
+            "x": 70.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": true,
+          "attributes": {
+            "charge_value": -3.0,
+            "sign": "-",
+            "color": "#ef4444"
+          }
+        }
+      ],
+      "rules": [
+        {
+          "rule_id": "rule_coulomb_attraction",
+          "trigger_condition": "opposite_signs",
+          "result_phenomenon": "Attractive Electrostatic Force",
+          "visual_effect": "Vector arrows point toward each other; force scales as 1/r\u00b2",
+          "feedback_text": "\u26a1 Opposites Attract! Force magnitude F = k |q1 q2| / r\u00b2 increases rapidly as distance shrinks.",
+          "source_reference": "Page 11"
+        }
+      ],
+      "challenges": [
+        {
+          "challenge_id": "ch_force_quadruple",
+          "title": "Inverse-Square Mastery",
+          "mission_prompt": "Halve the distance between the two charges and watch the force arrows quadruple in magnitude!",
+          "target_condition": "distance < 25",
+          "hint": "Drag charge 1 closer to charge 2.",
+          "misconception_buster": "Notice both charges experience equal and opposite forces regardless of their individual sizes (Newton's 3rd Law)!"
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "misc_friction_creates_charge",
+          "myth": "Rubbing glass or amber with wool creates brand new electrical charges out of nothing.",
+          "reality": "Friction merely transfers pre-existing outer valence electrons between materials; net charge of the universe is strictly conserved.",
+          "explanation": "The triboelectric effect involves contact potential differences and electron shearing, not nucleosynthesis of charge.",
+          "trap_scenario": "When a balloon is rubbed on wool and sticks to a neutral wall, was new charge synthesized in the balloon?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 11,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "27d199567993",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        },
+        {
+          "id": "misc_charge_asymmetry_force",
+          "myth": "A large +10 Coulomb charge exerts a much stronger repulsive force on a tiny +1 nanoCoulomb charge than the nanoCoulomb charge exerts back.",
+          "reality": "Both charges experience forces of strictly identical magnitude, governed by Newton's Third Law and the commutative product q1*q2.",
+          "explanation": "The electrostatic interaction is mutual; force magnitude depends on the product of both charges, not individual dominance.",
+          "trap_scenario": "If a massive thundercloud (+100 C) repels an airborne dust speck (+1 nC), does the cloud feel a smaller force than the speck?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 11,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "27d199567993",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "level_id": "level_concept_ch01_electrostatics_sec02_field",
+      "title": "Electric Charge & Coulomb's Law",
+      "topic": "Physics: Electrostatic Forces (Coulomb's Law)",
+      "manipulables": [
+        {
+          "id": "charge_1",
+          "label": "Charge q1 (+3 \u03bcC)",
+          "object_type": "electric_charge",
+          "initial_position": {
+            "x": 30.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": true,
+          "attributes": {
+            "charge_value": 3.0,
+            "sign": "+",
+            "color": "#3b82f6"
+          }
+        },
+        {
+          "id": "charge_2",
+          "label": "Charge q2 (-3 \u03bcC)",
+          "object_type": "electric_charge",
+          "initial_position": {
+            "x": 70.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": true,
+          "attributes": {
+            "charge_value": -3.0,
+            "sign": "-",
+            "color": "#ef4444"
+          }
+        }
+      ],
+      "rules": [
+        {
+          "rule_id": "rule_coulomb_attraction",
+          "trigger_condition": "opposite_signs",
+          "result_phenomenon": "Attractive Electrostatic Force",
+          "visual_effect": "Vector arrows point toward each other; force scales as 1/r\u00b2",
+          "feedback_text": "\u26a1 Opposites Attract! Force magnitude F = k |q1 q2| / r\u00b2 increases rapidly as distance shrinks.",
+          "source_reference": "Page 11"
+        }
+      ],
+      "challenges": [
+        {
+          "challenge_id": "ch_force_quadruple",
+          "title": "Inverse-Square Mastery",
+          "mission_prompt": "Halve the distance between the two charges and watch the force arrows quadruple in magnitude!",
+          "target_condition": "distance < 25",
+          "hint": "Drag charge 1 closer to charge 2.",
+          "misconception_buster": "Notice both charges experience equal and opposite forces regardless of their individual sizes (Newton's 3rd Law)!"
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "misc_friction_creates_charge",
+          "myth": "Rubbing glass or amber with wool creates brand new electrical charges out of nothing.",
+          "reality": "Friction merely transfers pre-existing outer valence electrons between materials; net charge of the universe is strictly conserved.",
+          "explanation": "The triboelectric effect involves contact potential differences and electron shearing, not nucleosynthesis of charge.",
+          "trap_scenario": "When a balloon is rubbed on wool and sticks to a neutral wall, was new charge synthesized in the balloon?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 11,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "dbfb16f1e3ec",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        },
+        {
+          "id": "misc_charge_asymmetry_force",
+          "myth": "A large +10 Coulomb charge exerts a much stronger repulsive force on a tiny +1 nanoCoulomb charge than the nanoCoulomb charge exerts back.",
+          "reality": "Both charges experience forces of strictly identical magnitude, governed by Newton's Third Law and the commutative product q1*q2.",
+          "explanation": "The electrostatic interaction is mutual; force magnitude depends on the product of both charges, not individual dominance.",
+          "trap_scenario": "If a massive thundercloud (+100 C) repels an airborne dust speck (+1 nC), does the cloud feel a smaller force than the speck?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 11,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "dbfb16f1e3ec",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "level_id": "level_concept_ch02_geodynamics_sec03_tectonics",
+      "title": "Plate Tectonics & Boundary Dynamics",
+      "topic": "Geology: Plate Tectonic Boundaries",
+      "manipulables": [
+        {
+          "id": "plate_left",
+          "label": "Plate A (Continental Crust)",
+          "object_type": "tectonic_plate",
+          "initial_position": {
+            "x": 25.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": false,
+          "attributes": {
+            "density": 2.7,
+            "color": "#10b981"
+          }
+        },
+        {
+          "id": "plate_right",
+          "label": "Plate B (Oceanic Crust)",
+          "object_type": "tectonic_plate",
+          "initial_position": {
+            "x": 75.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": false,
+          "attributes": {
+            "density": 3.0,
+            "color": "#06b6d4"
+          }
+        }
+      ],
+      "rules": [
+        {
+          "rule_id": "rule_convergent",
+          "trigger_condition": "distance < 15",
+          "result_phenomenon": "Convergent Boundary Collision",
+          "visual_effect": "Fold mountain buckling & oceanic subduction trench formation",
+          "feedback_text": "\ud83d\udca5 Convergent Boundary! Denser oceanic plate subducts beneath continental crust, melting into magma and thrusting up mountain chains.",
+          "source_reference": "Page 21"
+        },
+        {
+          "rule_id": "rule_divergent",
+          "trigger_condition": "distance > 65",
+          "result_phenomenon": "Divergent Boundary Rift",
+          "visual_effect": "Crustal fissure opens with glowing molten magma upwelling",
+          "feedback_text": "\ud83c\udf0b Divergent Boundary! As plates pull apart, molten basaltic magma rises from the mantle to create new oceanic crust.",
+          "source_reference": "Page 21"
+        },
+        {
+          "rule_id": "rule_neutral",
+          "trigger_condition": "15 <= distance <= 65",
+          "result_phenomenon": "Stable Gliding",
+          "visual_effect": "Plates floating on ductile asthenosphere mantle",
+          "feedback_text": "Plates are in balanced transit over the convection currents of the asthenosphere.",
+          "source_reference": "General Plate Tectonics"
+        }
+      ],
+      "challenges": [
+        {
+          "challenge_id": "ch_himalayas",
+          "title": "Form the Mountain Arc",
+          "mission_prompt": "Drag Plate A and Plate B together until they collide to produce a convergent fold mountain boundary.",
+          "target_condition": "distance < 15",
+          "hint": "Move the plates toward the center canvas.",
+          "misconception_buster": "Notice how subduction occurs because oceanic crust is denser than continental crust!"
+        },
+        {
+          "challenge_id": "ch_rift_valley",
+          "title": "Open a Mid-Ocean Rift",
+          "mission_prompt": "Pull the plates far apart to observe what happens at a divergent zone.",
+          "target_condition": "distance > 65",
+          "hint": "Drag both plates away from each other toward the outer edges.",
+          "misconception_buster": "Busted: Divergence does not create empty vacuum \u2014 magma immediately wells up to forge new seabed!"
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "misc_magma_ocean",
+          "myth": "Tectonic plates float like boats on top of a completely liquid ocean of molten magma.",
+          "reality": "The asthenosphere is over 98% solid crystalline rock that creeps via plastic viscoelastic deformation under high pressure and temperature.",
+          "explanation": "True molten liquid magma only exists in isolated melt pockets and volcanic magma chambers.",
+          "trap_scenario": "If you drill 100 km through an oceanic plate, will you fall into a subterranean ocean of liquid lava?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 21,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "656a58a9c632",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        },
+        {
+          "id": "misc_crust_earthquake_separation",
+          "myth": "Earthquakes open up bottomless chasms that swallow cities like in disaster movies.",
+          "reality": "Earthquakes are shear slip events along locked fault planes where friction is overcome; plates slide past or over each other under intense compressive lithostatic pressure.",
+          "explanation": "Lithostatic overburden pressure prevents deep open chasms from forming or remaining open in the crust.",
+          "trap_scenario": "Can an earthquake fault open up a 5-kilometer deep bottomless chasm?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 21,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "656a58a9c632",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "level_id": "level_concept_ch03_gravitation_sec04_gravity",
+      "title": "Universal Gravitation & Orbital Freefall",
+      "topic": "Universal Gravitation & Orbital Mechanics",
+      "manipulables": [
+        {
+          "id": "param_controller",
+          "label": "Physical Parameter Controller",
+          "object_type": "generic_slider",
+          "initial_position": {
+            "x": 50.0,
+            "y": 50.0
+          },
+          "allow_drag_x": true,
+          "allow_drag_y": false,
+          "attributes": {
+            "value": 1.0
+          }
+        }
+      ],
+      "rules": [
+        {
+          "rule_id": "rule_equilibrium",
+          "trigger_condition": "value > 0.5",
+          "result_phenomenon": "F_g = G \\cdot \\frac{M \\cdot m}{r^2} = m \\cdot \\frac{v^2}{r}",
+          "visual_effect": "Harmonic oscillation equilibrium",
+          "feedback_text": "Demonstration of F_g = G \\cdot \\frac{M \\cdot m}{r^2} = m \\cdot \\frac{v^2}{r}",
+          "source_reference": "Textbook Chapter"
+        }
+      ],
+      "challenges": [
+        {
+          "challenge_id": "ch_general",
+          "title": "Concept Demonstration",
+          "mission_prompt": "Adjust the parameter to observe the direct effect described in Universal Gravitation & Orbital Freefall.",
+          "target_condition": "value > 0.7",
+          "hint": "Drag controller past 70%.",
+          "misconception_buster": "Orbital velocity (~7.66 km/s) carries them forward at the exact rate the Earth's surface curves away beneath them."
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "misc_zero_g_in_orbit",
+          "myth": "Astronauts on the International Space Station float because there is zero gravity in space.",
+          "reality": "Earth's gravity at the ISS altitude (400 km) is ~90% of surface gravity; astronauts float because both they and the station are in continuous orbital freefall.",
+          "explanation": "Orbital velocity (~7.66 km/s) carries them forward at the exact rate the Earth's surface curves away beneath them.",
+          "trap_scenario": "If the ISS stopped moving tangentially in orbit, would astronauts continue to float weightlessly?",
+          "provenance": {
+            "source_file": "Modern Physics & Earth Dynamics.pdf",
+            "page_number": 31,
+            "bbox": {
+              "x": 5.0,
+              "y": 10.0,
+              "width": 90.0,
+              "height": 35.0
+            },
+            "source_text_hash": "cc1782e0dd0f",
+            "is_inferred": false,
+            "confidence": 1.0,
+            "reason": null
+          }
+        }
+      ]
+    }
+  ]
+}

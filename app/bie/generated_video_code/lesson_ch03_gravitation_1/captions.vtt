@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00.000 --> 00:10.967
+Dr. Maya (Lead Instructor): Welcome. Today we explore Universal Gravitation & Orbital Freefall — moving beyond textbook definitions to discover how nature actually behaves in the real physical universe.
+
+2
+00:10.967 --> 00:22.767
+Dr. Maya (Lead Instructor): Observe this real-world event: Astronauts conducting experiments inside the ISS demonstrating orbital freefall equivalence.. This isn't an abstract equation; it is governing the real world right now.
+
+3
+00:22.767 --> 00:36.200
+Dr. Maya (Lead Instructor): The underlying mathematical law is formulated as: F_g = G \cdot \frac{M \cdot m}{r^2} = m \cdot \frac{v^2}{r}. Notice how each variable directly maps to a physical property of the system.
+
+4
+00:36.200 --> 00:44.267
+Alex (Curious Student): Isn't it true that Astronauts on the International Space Station float because there is zero gravity in space.?
+
+5
+00:44.267 --> 01:07.233
+Dr. Maya (Lead Instructor): That is a very common intuitive pitfall! But in reality: Earth's gravity at the ISS altitude (400 km) is ~90% of surface gravity; astronauts float because both they and the station are in continuous orbital freefall.. Orbital velocity (~7.66 km/s) carries them forward at the exact rate the Earth's surface curves away beneath them.
+
+6
+01:07.233 --> 01:18.600
+Dr. Maya (Lead Instructor): Now that you've mastered the fundamentals of Universal Gravitation & Orbital Freefall, it is time to test your intuition in the interactive revision sandbox. Let's begin!

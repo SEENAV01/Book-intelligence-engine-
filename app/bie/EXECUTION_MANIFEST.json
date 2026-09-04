@@ -1,0 +1,39 @@
+{
+  "status": "SUCCESS",
+  "document_title": "Quantum Foundations",
+  "document_hash": "bb0e6707b2948fcf732ee7be8e5596c884daf188fda76e02135c1109c1f250af",
+  "total_chapters": 1,
+  "total_blocks_ingested": 3,
+  "total_lessons_generated": 1,
+  "stage_timings_seconds": {
+    "M001_ingestion_and_spatial_intelligence": 0.0,
+    "M050_prerequisite_plus_concept_understanding": 0.0,
+    "M100_curriculum_planning_remedial_bridges": 0.0,
+    "M150_M200_script_and_scene_dsl_qa": 0.0,
+    "M250_remotion_video_code_generator": 0.001,
+    "M275_interactive_game_generator": 0.0
+  },
+  "total_latency_seconds": 0.001,
+  "qa_audit": {
+    "lesson_ch_1_1": {
+      "passed": true,
+      "collision_score": 0.0
+    }
+  },
+  "video_code_artifacts": [
+    "Root.tsx",
+    "BIELesson.tsx",
+    "lesson_ch_1_1/props.json",
+    "lesson_ch_1_1/captions.vtt"
+  ],
+  "revision_game_artifacts": [
+    "book_game_data.json",
+    "index.html",
+    "InteractiveRevisionGame.tsx"
+  ],
+  "deliverable_roots": {
+    "video_code_dir": "/tmp/tmpk3vyetij/pdf_video_code",
+    "revision_game_dir": "/tmp/tmpk3vyetij/pdf_game_code"
+  },
+  "prerequisite_bridges_inserted": []
+}

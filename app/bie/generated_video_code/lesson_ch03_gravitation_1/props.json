@@ -1,0 +1,201 @@
+{
+  "lesson_id": "lesson_ch03_gravitation_1",
+  "title": "Lesson 1: Universal Gravitation & Orbital Freefall",
+  "duration_frames": 2358,
+  "fps": 30,
+  "concept": {
+    "id": "concept_ch03_gravitation_sec04_gravity",
+    "title": "Universal Gravitation & Orbital Freefall",
+    "core_law": "F_g = G \\cdot \\frac{M \\cdot m}{r^2} = m \\cdot \\frac{v^2}{r}",
+    "misconceptions": [
+      {
+        "id": "misc_zero_g_in_orbit",
+        "myth": "Astronauts on the International Space Station float because there is zero gravity in space.",
+        "reality": "Earth's gravity at the ISS altitude (400 km) is ~90% of surface gravity; astronauts float because both they and the station are in continuous orbital freefall.",
+        "explanation": "Orbital velocity (~7.66 km/s) carries them forward at the exact rate the Earth's surface curves away beneath them.",
+        "trap_scenario": "If the ISS stopped moving tangentially in orbit, would astronauts continue to float weightlessly?",
+        "provenance": {
+          "source_file": "Modern Physics & Earth Dynamics.pdf",
+          "page_number": 31,
+          "bbox": {
+            "x": 5.0,
+            "y": 10.0,
+            "width": 90.0,
+            "height": 35.0
+          },
+          "source_text_hash": "cc1782e0dd0f",
+          "is_inferred": false,
+          "confidence": 1.0,
+          "reason": null
+        }
+      }
+    ],
+    "phenomena": [
+      {
+        "title": "ISS Space Station Freefall Flight",
+        "type": "real_video_clip",
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "overlay_label": "Real-Life Orbital Dynamics: 90% surface gravity perceived as weightless freefall",
+        "description": "Astronauts conducting experiments inside the ISS demonstrating orbital freefall equivalence."
+      }
+    ]
+  },
+  "visual_elements": [
+    {
+      "id": "header_banner",
+      "element_type": "text",
+      "bbox": {
+        "x": 5.0,
+        "y": 4.0,
+        "width": 90.0,
+        "height": 10.0
+      },
+      "properties": {
+        "title": "Lesson 1: Universal Gravitation & Orbital Freefall",
+        "subtitle": "Universal Gravitation & Orbital Freefall",
+        "theme": "glow_cyan",
+        "font_size": 28
+      },
+      "start_frame": 0,
+      "duration_frames": 2358,
+      "layer_z": 2
+    },
+    {
+      "id": "vector_simulation_canvas",
+      "element_type": "vector_animation",
+      "bbox": {
+        "x": 5.0,
+        "y": 18.0,
+        "width": 43.0,
+        "height": 64.0
+      },
+      "properties": {
+        "animation_type": "spring_particles",
+        "concept_id": "concept_ch03_gravitation_sec04_gravity",
+        "metaphor": "Newton's Mountain cannonball: fired so fast that its projectile trajectory curves at the exact rate as the spherical Earth",
+        "symbols": [
+          {
+            "symbol": "G",
+            "meaning": "Universal Gravitational Constant",
+            "unit": "N*m^2/kg^2",
+            "physical_intuition": "Universal coupling strength (~6.674e-11)"
+          },
+          {
+            "symbol": "M, m",
+            "meaning": "Gravitational Masses",
+            "unit": "Kilogram (kg)",
+            "physical_intuition": "Inertial and gravitational source masses"
+          },
+          {
+            "symbol": "v_{orbit}",
+            "meaning": "Orbital Velocity",
+            "unit": "m/s",
+            "physical_intuition": "Tangential speed needed to maintain circular freefall"
+          }
+        ]
+      },
+      "start_frame": 0,
+      "duration_frames": 2358,
+      "layer_z": 1
+    },
+    {
+      "id": "real_phenomenon_clip",
+      "element_type": "real_video_clip",
+      "bbox": {
+        "x": 51.0,
+        "y": 18.0,
+        "width": 44.0,
+        "height": 38.0
+      },
+      "properties": {
+        "source_url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "overlay_label": "\ud83d\udd34 Real-Life Observation: ISS Space Station Freefall Flight",
+        "attribution": "BIE Science Footage Archive",
+        "aspect_ratio": "16:9",
+        "border_glow": "cyan"
+      },
+      "start_frame": 60,
+      "duration_frames": 2298,
+      "layer_z": 2
+    },
+    {
+      "id": "core_law_card",
+      "element_type": "formula_card",
+      "bbox": {
+        "x": 51.0,
+        "y": 58.0,
+        "width": 44.0,
+        "height": 24.0
+      },
+      "properties": {
+        "core_law": "F_g = G \\cdot \\frac{M \\cdot m}{r^2} = m \\cdot \\frac{v^2}{r}",
+        "source_citation": "Page 31",
+        "font_size": 18
+      },
+      "start_frame": 90,
+      "duration_frames": 2268,
+      "layer_z": 2
+    },
+    {
+      "id": "subtitle_strip",
+      "element_type": "subtitle_bar",
+      "bbox": {
+        "x": 5.0,
+        "y": 85.0,
+        "width": 90.0,
+        "height": 10.0
+      },
+      "properties": {
+        "font_size": 20,
+        "background_alpha": 0.85
+      },
+      "start_frame": 0,
+      "duration_frames": 2358,
+      "layer_z": 3
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "Dr. Maya (Lead Instructor)",
+      "text": "Welcome. Today we explore Universal Gravitation & Orbital Freefall \u2014 moving beyond textbook definitions to discover how nature actually behaves in the real physical universe.",
+      "duration_frames": 329,
+      "emotion": "curious_and_engaging",
+      "visual_cue": "Fade in luminous dark-slate canvas with ambient particle constellation and title typography"
+    },
+    {
+      "speaker": "Dr. Maya (Lead Instructor)",
+      "text": "Observe this real-world event: Astronauts conducting experiments inside the ISS demonstrating orbital freefall equivalence.. This isn't an abstract equation; it is governing the real world right now.",
+      "duration_frames": 354,
+      "emotion": "dramatic_and_authoritative",
+      "visual_cue": "Trigger real-life video overlay: 'ISS Space Station Freefall Flight' with HUD metadata telemetry"
+    },
+    {
+      "speaker": "Dr. Maya (Lead Instructor)",
+      "text": "The underlying mathematical law is formulated as: F_g = G \\cdot \\frac{M \\cdot m}{r^2} = m \\cdot \\frac{v^2}{r}. Notice how each variable directly maps to a physical property of the system.",
+      "duration_frames": 403,
+      "emotion": "precise_and_clear",
+      "visual_cue": "Render dynamic vector diagram with mathematical LaTeX formula highlight and animated arrows"
+    },
+    {
+      "speaker": "Alex (Curious Student)",
+      "text": "Isn't it true that Astronauts on the International Space Station float because there is zero gravity in space.?",
+      "duration_frames": 242,
+      "emotion": "curious_and_engaging",
+      "visual_cue": "Display red amber trap scenario callout card"
+    },
+    {
+      "speaker": "Dr. Maya (Lead Instructor)",
+      "text": "That is a very common intuitive pitfall! But in reality: Earth's gravity at the ISS altitude (400 km) is ~90% of surface gravity; astronauts float because both they and the station are in continuous orbital freefall.. Orbital velocity (~7.66 km/s) carries them forward at the exact rate the Earth's surface curves away beneath them.",
+      "duration_frames": 689,
+      "emotion": "insightful_and_illuminating",
+      "visual_cue": "Shatter the misconception trap card and replace with emerald grounded truth card"
+    },
+    {
+      "speaker": "Dr. Maya (Lead Instructor)",
+      "text": "Now that you've mastered the fundamentals of Universal Gravitation & Orbital Freefall, it is time to test your intuition in the interactive revision sandbox. Let's begin!",
+      "duration_frames": 341,
+      "emotion": "motivational",
+      "visual_cue": "Pulse neon interactive Revision Game badge and slide in level select button"
+    }
+  ]
+}

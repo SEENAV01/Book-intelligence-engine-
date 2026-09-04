@@ -1,0 +1,120 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Book-to-Video Intelligence Engine (BIE) Enterprise API",
+    "version": "1.0.0",
+    "description": "Production REST API Gateway for automated textbook ingestion, cognitive decomposition, Remotion video compilation, and interactive 3D physics sandboxes."
+  },
+  "servers": [
+    { "url": "https://api.bie-engine.com/v1", "description": "Production Enterprise Gateway" },
+    { "url": "http://localhost:3000/api", "description": "Local Development Server" }
+  ],
+  "paths": {
+    "/textbooks/ingest": {
+      "post": {
+        "summary": "Ingest a raw textbook or PDF document",
+        "operationId": "ingestTextbook",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["title", "subject", "content"],
+                "properties": {
+                  "title": { "type": "string", "example": "Principles of Classical Electrodynamics" },
+                  "subject": { "type": "string", "example": "Physics" },
+                  "content": { "type": "string", "description": "Raw markdown or extracted PDF text" },
+                  "targetAudience": { "type": "string", "enum": ["secondary", "undergraduate", "graduate"], "default": "undergraduate" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Document ingestion accepted into task queue",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "textbookId": { "type": "string", "format": "uuid" },
+                    "jobId": { "type": "string", "format": "uuid" },
+                    "status": { "type": "string", "example": "PROCESSING" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/render/dispatch": {
+      "post": {
+        "summary": "Dispatch distributed Remotion 4K video render job",
+        "operationId": "dispatchRenderJob",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["lessonId", "codec"],
+                "properties": {
+                  "lessonId": { "type": "string", "example": "lesson_coulombs_law" },
+                  "codec": { "type": "string", "enum": ["H264_AAC", "PRORES_422", "AV1"], "default": "H264_AAC" },
+                  "resolution": { "type": "string", "enum": ["1080p", "4K"], "default": "1080p" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Render job dispatched across cluster",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "jobId": { "type": "string", "format": "uuid" },
+                    "workerCount": { "type": "integer", "example": 8 },
+                    "estimatedSeconds": { "type": "number", "example": 18.5 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/knowledge-graph/concept/{conceptId}": {
+      "get": {
+        "summary": "Retrieve prerequisite tree and cognitive misconceptions for a concept",
+        "operationId": "getConceptOntology",
+        "parameters": [
+          { "name": "conceptId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Concept ontology retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "name": { "type": "string" },
+                    "prerequisites": { "type": "array", "items": { "type": "object" } },
+                    "misconceptions": { "type": "array", "items": { "type": "object" } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

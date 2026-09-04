@@ -1,0 +1,15 @@
+[
+  "app/bie/tests/test_canonical_pipeline.py::test_canonical_pipeline_end_to_end",
+  "app/bie/tests/test_canonical_pipeline.py::test_canonical_pipeline_from_synthetic_pdf",
+  "app/bie/tests/test_concept_understanding.py::test_prerequisite_plus_electric_charge",
+  "app/bie/tests/test_concept_understanding.py::test_prerequisite_plus_tectonic_plates",
+  "app/bie/tests/test_document_ingestor.py::test_markdown_ingestion",
+  "app/bie/tests/test_document_ingestor.py::test_synthetic_binary_pdf_ingestion",
+  "app/bie/tests/test_game_generator.py::test_revision_game_generation",
+  "app/bie/tests/test_lesson_planner.py::test_no_bridge_when_learner_ready",
+  "app/bie/tests/test_lesson_planner.py::test_prerequisite_bridge_inserted_when_unready",
+  "app/bie/tests/test_remotion_generator.py::test_remotion_generator_all_lessons",
+  "app/bie/tests/test_scene_dsl.py::test_auto_repair_injected_collision",
+  "app/bie/tests/test_scene_dsl.py::test_scene_dsl_zero_collision_and_real_phenomenon",
+  "app/bie/tests/test_script_compiler.py::test_script_compiler_pacing_and_dialogue"
+]

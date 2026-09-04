@@ -1,0 +1,65 @@
+version: '3.9'
+
+services:
+  bie-gateway:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: bie_enterprise_gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=postgresql://bie_admin:secret_pass@bie-postgres:5432/bie_production
+      - NEO4J_URI=bolt://bie-neo4j:7687
+      - REDIS_URL=redis://bie-redis:6379/0
+    depends_on:
+      - bie-postgres
+      - bie-neo4j
+      - bie-redis
+
+  bie-postgres:
+    image: pgvector/pgvector:pg16
+    container_name: bie_postgres
+    environment:
+      POSTGRES_USER: bie_admin
+      POSTGRES_PASSWORD: secret_pass
+      POSTGRES_DB: bie_production
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/postgres_schema.sql:/docker-entrypoint-initdb.d/init.sql
+
+  bie-neo4j:
+    image: neo4j:5.18-community
+    container_name: bie_neo4j
+    environment:
+      NEO4J_AUTH: neo4j/bie_secret_graph_pwd
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4jdata:/data
+
+  bie-redis:
+    image: redis:7.2-alpine
+    container_name: bie_redis
+    ports:
+      - "6379:6379"
+
+  bie-render-worker-pool:
+    image: node:22-bullseye
+    container_name: bie_render_workers
+    deploy:
+      replicas: 8
+    environment:
+      - REDIS_URL=redis://bie-redis:6379/0
+    command: ["npx", "remotion", "versions"]
+
+volumes:
+  pgdata:
+  neo4jdata:
